@@ -1,5 +1,5 @@
 # Planning phase -- alpha-taskangel
-initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works
+initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works. for public readers, this was iterated and soundboarded against chatgpt to aggregate information from preexisting sources, but the ideas and implementations were largely thought through beforehand. 
 
 ## 🌱 Ongoing Bounties & Concept Branching
 ### 🔄 What Are Ongoing Bounties?
