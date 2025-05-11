@@ -1,8 +1,8 @@
 # Planning phase -- alpha-taskangel
 initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works
 
-🌱 Ongoing Bounties & Concept Branching
-🔄 What Are Ongoing Bounties?
+## 🌱 Ongoing Bounties & Concept Branching
+### 🔄 What Are Ongoing Bounties?
 An Ongoing Bounty is a bounty with a persistent or cumulative reward pool that:
 
 Encourages multiple submissions or continuous improvement
@@ -11,7 +11,7 @@ Accepts refinements, optimizations, or variants of a core task
 
 May never fully close, but rewards iterative contributions over time
 
-💡 Use Cases:
+### 💡 Use Cases:
 Improving an open-source tool incrementally
 
 Refining a research summary over several contributors
@@ -20,7 +20,7 @@ Generating a library of educational material
 
 Expanding on a public dataset
 
-🌿 What Are Branchable Tasks?
+### 🌿 What Are Branchable Tasks?
 Branchable Tasks allow users to fork an existing task or bounty, using it as the seed for:
 
 A new idea, variant, or use-case
@@ -31,7 +31,7 @@ A chain of progressive enhancements
 
 Each branch can be turned into its own new bounty—with its own backers or tied to the treasury.
 
-🔁 How Ongoing Bounties Work in TaskAngel
+### 🔁 How Ongoing Bounties Work in TaskAngel
 Poster creates a bounty and marks it as Ongoing (toggle or tag)
 
 A fund pool (e.g. $500) is locked into it
@@ -52,7 +52,7 @@ Treasury or other backers can top it up
 
 Or it can close gracefully
 
-🌱 How Branching Works
+### 🌱 How Branching Works
 Any task can be forked with a single click: “Branch This Task”
 
 The brancher:
@@ -71,7 +71,7 @@ Inherit visibility in a shared thread/feed
 
 Get bonus reward weight from governance for ecosystem growth
 
-💰 Integration with Treasury & Meta-System
+### 💰 Integration with Treasury & Meta-System
 Component	Interaction
 Ongoing Bounties	Treasury can fund long-running public goods bounties (e.g., "Improve the climate policy dataset")
 Branching	Allows for decentralized idea evolution, incentivized through micro-bounties and peer validation
@@ -79,7 +79,7 @@ Meta-bounties	Still govern all verification, moderation, QA tasks around both ne
 Slashing	Still applies to dishonest meta-task verifiers or reviewers
 Staking	Optional for those improving on high-value Ongoing Bounties (to prevent spam/fork flooding)
 
-🧠 Example Workflow: Branchable + Ongoing
+## 🧠 Example Workflow: Branchable + Ongoing
 Task: "Build a browser plugin that blocks hate speech"
 
 Marked as Ongoing, funded with $400 pool
@@ -100,7 +100,7 @@ Staked, peer-reviewed
 
 Verified as legitimate expansion
 
-✨ Benefits of This Model
+### ✨ Benefits of This Model
 Benefit	How It Delivers
 🌱 Ongoing Innovation	Encourages continuous iteration, not just one-and-done
 🧬 Ecosystem Growth	Branching builds interconnected layers of bounties
@@ -109,9 +109,9 @@ Benefit	How It Delivers
 🔍 Better Discoverability	Users can browse task trees, not just isolated bounties
 
 
-Activity tracking + value-based history logging into TaskAngel, in a way that’s lightweight now but becomes powerful later.
+## Activity tracking + value-based history logging into TaskAngel, in a way that’s lightweight now but becomes powerful later.
 
-🧭 Why Track Activity?
+### 🧭 Why Track Activity?
 Tracking actions of value gives you the raw data needed to build:
 
 A reputation system (trust, consistency, quality)
@@ -124,10 +124,10 @@ Community rewards (retroactive airdrops, badges, ranks)
 
 Sybil resistance (by proving ongoing good-faith effort)
 
-🧱 What Should Be Logged?
+### 🧱 What Should Be Logged?
 Here's a breakdown of trackable user actions, categorized by user role and impact level:
 
-🧑‍💼 Posters
+#### 🧑‍💼 Posters
 Action	Data to Store
 Created bounty	Bounty ID, criteria hash, funding amount, timestamp
 Funded treasury	Amount, purpose, timestamp
@@ -135,7 +135,7 @@ Refueled ongoing bounty	Bounty ID, amount, timestamp
 Approved/declined submissions	Bounty ID, submission ID, action, timestamp
 Created Angel Proposal	Proposal ID, description hash, votes, outcome
 
-🧑‍🔧 Hunters
+#### 🧑‍🔧 Hunters
 Action	Data to Store
 Claimed a task	Bounty ID, timestamp
 Submitted solution	Submission ID, bounty ID, size/complexity tag
@@ -144,14 +144,14 @@ Took a meta-task	Meta-task ID, stake amount
 Got stake slashed or returned	Task ID, reason, timestamp
 Branched a bounty	Origin ID, new bounty ID, timestamp
 
-🤖 Platform / System
+#### 🤖 Platform / System
 Action	Data to Store
 Treasury-funded bounty	Bounty ID, treasury grant amount
 Slashing event	User ID, amount, task ID, reason
 Reputation adjustment (future)	Trigger type, old value, new value
 
 💾 Database Schema Recommendation (Modular + Future-Ready)
-sql
+```sql
 Copy
 Edit
 -- Users Table
@@ -204,7 +204,9 @@ treasury_events (
     target_id UUID, -- bounty or proposal
     timestamp TIMESTAMP
 )
-🔢 Tracking “Value Score” for Each Action
+```
+
+### 🔢 Tracking “Value Score” for Each Action
 To prepare for future reputation weighting, each action can have an optional value_weight attached based on:
 
 Amount of funding moved
@@ -215,21 +217,19 @@ Approval rate
 
 Peer reviews
 
-On-chain transaction gas (optional)
+On-chain transaction gas (optional: don't have to show this score to users now—just record and store it quietly)
 
-You don't have to show this score to users now—just record and store it quietly.
-
-🔮 Reputation System Later (Preview)
+## 🔮 Reputation System Later (Preview)
 You could eventually calculate a Reputation Score for each user as a weighted sum of:
 
-text
-Copy
-Edit
+```
 = (Funds Posted * 0.3)
 + (Angel Tasks Proposed * 0.2)
 + (Bounties Completed * 0.3)
 + (Meta Tasks Successfully Verified * 0.1)
 - (Tasks Rejected or Slashed * 0.1)
+```
+
 You could also assign roles later like:
 
 🏆 Angel Patron (top 1% funders)
@@ -239,7 +239,7 @@ You could also assign roles later like:
 🚀 Pathfinder (frequent branchers/innovators)
 
 
-🪙 Token Name: $HALO
+## 🪙 Token Name: $HALO
 The $HALO token is the native utility + governance token of TaskAngel.
 
 🧬 Token Roles
@@ -310,10 +310,9 @@ $HALO stake can amplify reputation credibility ("skin in the game")
 
 Reputation boosts earn retroactive $HALO drops from treasury
 
-🧮 Token Economic Model: Sustainability Loop
-mermaid
-Copy
-Edit
+### 🧮 Token Economic Model: Sustainability Loop 
+(broken - fix this later)
+```mermaid
 flowchart TD
   A[User Funds Bounty] -->|Fee| T[Treasury]
   T -->|Funds Angel Tasks| AA[Charitable Bounties]
@@ -323,6 +322,8 @@ flowchart TD
   D[Treasury Matching Grants] --> AA
   E[User Stakes $HALO on Others] -->|Boost Rep| F
   F -->|Reputation Rewards| $HALO
+```
+
 🔄 Optional Token Enhancements
 Feature	Description
 Quadratic Voting	Treasury votes weighted by square root of $HALO held, not linear
@@ -331,7 +332,7 @@ Yield Utility	Treasury deposits $HALO into DeFi protocols to generate stablecoin
 Retroactive Public Goods Funding	High-impact contributors rewarded from reserve pool via vote
 
 
-🌐 TaskAngel Sitemap
+## 🌐 TaskAngel Sitemap
 🏠 1. Homepage
 URL: /
 
@@ -587,7 +588,7 @@ Stake $HALO for proposal support 🔧
 
 Vote on Proposal (Quadratic/Linear) 🔧
 
-✅ Pages That Change Data (Summary)
+### ✅ Pages That Change Data (Summary)
 Page	Type of Data Changed
 Bounty Detail Page	Bounty edits, fund updates, submission acceptance
 Submit Work Page	New submission
