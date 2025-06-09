@@ -1,6 +1,120 @@
 # Planning phase -- alpha-taskangel
 initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works. for public readers, this was iterated and soundboarded against chatgpt to aggregate information from preexisting sources, but the ideas and implementations were largely thought through beforehand. 
 
+
+## 🗓️ Trello Clone: 7-Day Development Plan
+### Tech Stack
+- Frontend: Next.js (App Router) + TailwindCSS
+
+- Backend: Next.js API Routes or Server Actions
+
+- Database: PostgreSQL (AWS RDS)
+
+- Auth: Auth.js (PostgreSQL Adapter)
+
+- CI/CD: Docker + GitHub Actions + AWS Elastic Beanstalk
+
+- ORM: Prisma
+
+### 📅 Day 1 – Initial Setup & Infrastructure
+ Create AWS RDS PostgreSQL instance
+
+ Set up AWS Elastic Beanstalk environment (Node.js or custom Docker)
+
+ Scaffold Next.js project
+
+ Install TailwindCSS, Prisma
+
+ Configure .env with AWS RDS credentials
+
+ Set up initial Prisma schema with:
+
+User, Account, Session (Auth.js tables)
+
+✅ Deliverable: App running locally and connected to AWS PostgreSQL
+
+### 📅 Day 2 – Dockerize & CI/CD Pipeline
+ Write Dockerfile for multi-stage Next.js build
+
+ Create .dockerignore
+
+ Configure GitHub Actions workflow:
+
+Build Docker image
+
+Push to Elastic Beanstalk via AWS CLI or EB CLI
+
+Run migrations before deploy (optional)
+
+ Test full deployment from GitHub to AWS
+
+✅ Deliverable: CI/CD pipeline deploys app to AWS EB on main push
+
+### 📅 Day 3 – Auth Integration (Auth.js)
+ Install and configure auth.js
+
+ Use PostgreSQL adapter with JWT sessions
+
+ Enable credentials provider (or add Google/GitHub)
+
+ Secure routes and add login/signup UI
+
+ On first login, auto-generate a “Personal Tasks” board
+
+✅ Deliverable: Functional authentication + default board on login
+
+### 📅 Day 4 – Boards, Columns, and Cards
+ Define models: Board, Column, Card
+
+ Build a basic Kanban board view
+
+ Allow adding, editing, deleting cards
+
+ Implement drag-and-drop using dnd-kit
+
+ Persist changes in the database
+
+✅ Deliverable: Fully working personal task board with DnD functionality
+
+### 📅 Day 5 – Idea Capture + Auto Task Generation
+ Add floating idea capture button or command palette
+
+ Form inputs: title, notes, tags
+
+ On submission:
+
+Store idea in DB
+
+Auto-generate a task on "To Do" column of personal board
+
+ Confirm with toast or visual feedback
+
+✅ Deliverable: Idea capture feature that turns ideas into actionable tasks
+
+### 📅 Day 6 – UI Polish & Mobile Layout
+ Improve layout, spacing, hover/empty states
+
+ Make board responsive for mobile
+
+ Add icons, animations, labels, optional tags
+
+ Polish drag behavior on touch devices
+
+✅ Deliverable: Clean, responsive UI with intuitive task management
+
+### 📅 Day 7 – Finalize Deployment & QA
+ Final testing of the entire flow (login → board → task → idea)
+
+ Set up error logging (Sentry, CloudWatch, etc.)
+
+ Optimize build and image size
+
+ Update documentation and README
+
+ Confirm CI pipeline is production-ready
+
+✅ Deliverable: Fully deployed Trello clone with CI/CD and production readiness
+
 ## 🌱 Ongoing Bounties & Concept Branching
 ### 🔄 What Are Ongoing Bounties?
 An Ongoing Bounty is a bounty with a persistent or cumulative reward pool that:
