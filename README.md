@@ -1,6 +1,5 @@
 # Planning phase -- alpha-taskangel
-initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works. for public readers, this was iterated and soundboarded against chatgpt to aggregate information from preexisting sources, but the ideas and implementations were largely thought through beforehand. 
-
+initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works 
 
 ## 🗓️ Trello Clone: 7-Day Development Plan
 ### Tech Stack
