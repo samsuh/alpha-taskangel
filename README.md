@@ -1,7 +1,7 @@
 # Planning phase -- alpha-taskangel
 initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works 
 
-## 🗓️ Trello Clone: 7-Day Development Plan
+## 🗓️ Trello Clone: Initial Development Plan
 ### Tech Stack
 - Frontend: Next.js (App Router) + TailwindCSS
 
@@ -15,24 +15,39 @@ initial prototype of taskangel, a self-administrating decentralized task complet
 
 - ORM: Prisma
 
-### 📅 Day 1 – Initial Setup & Infrastructure
+### 📅 Phase 1 – Initial Setup & Infrastructure
 - Create AWS RDS PostgreSQL instance
 
-- Set up AWS Elastic Beanstalk environment (Node.js or custom Docker)
+- Set up Dockerized Postgres instance
 
 - Scaffold Next.js project
 
 - Install TailwindCSS, Prisma
 
-- Configure .env with AWS RDS credentials
+- Configure .env with postgres
 
 - Set up initial Prisma schema with:
+ - User, Account, Session (Auth.js required tables)
 
-- User, Account, Session (Auth.js tables)
+✅ Deliverable: App running locally and connected to Dockerized PostgreSQL
+#### Phase 1 Status: **Completed** on 6/11/25
 
-✅ Deliverable: App running locally and connected to AWS PostgreSQL
+### 📅 Phase 2 – Auth Integration (Auth.js)
+- Install and configure auth.js
 
-### 📅 Day 2 – Dockerize & CI/CD Pipeline
+- Use PostgreSQL adapter with JWT sessions
+
+- Enable credentials provider (or add Google/GitHub)
+
+- Secure routes and add login/signup UI
+
+- (Deferred to after boards created) On first login, auto-generate a “Personal Tasks” board 
+
+✅ Deliverable: Functional authentication + default board on login
+#### Phase 2 Status: Completed on 6/12
+
+### 📅 Phase 3 – Dockerize & CI/CD Pipeline
+#### Phase 3 Status: In Progress.
 - Write Dockerfile for multi-stage Next.js build
 
 - Create .dockerignore
@@ -49,20 +64,9 @@ initial prototype of taskangel, a self-administrating decentralized task complet
 
 ✅ Deliverable: CI/CD pipeline deploys app to AWS EB on main push
 
-### 📅 Day 3 – Auth Integration (Auth.js)
-- Install and configure auth.js
 
-- Use PostgreSQL adapter with JWT sessions
 
-- Enable credentials provider (or add Google/GitHub)
-
-- Secure routes and add login/signup UI
-
-- On first login, auto-generate a “Personal Tasks” board
-
-✅ Deliverable: Functional authentication + default board on login
-
-### 📅 Day 4 – Boards, Columns, and Cards
+### 📅 Phase 4 – Boards, Columns, and Cards
 - Define models: Board, Column, Card
 
 - Build a basic Kanban board view
@@ -75,7 +79,7 @@ initial prototype of taskangel, a self-administrating decentralized task complet
 
 ✅ Deliverable: Fully working personal task board with DnD functionality
 
-### 📅 Day 5 – Idea Capture + Auto Task Generation
+### 📅 Phase 5 – Idea Capture + Auto Task Generation
 - Add floating idea capture button or command palette
 
 - Form inputs: title, notes, tags
@@ -90,7 +94,7 @@ initial prototype of taskangel, a self-administrating decentralized task complet
 
 ✅ Deliverable: Idea capture feature that turns ideas into actionable tasks
 
-### 📅 Day 6 – UI Polish & Mobile Layout
+### 📅 Phase 6 – UI Polish & Mobile Layout
 - Improve layout, spacing, hover/empty states
 
 - Make board responsive for mobile
@@ -101,7 +105,7 @@ initial prototype of taskangel, a self-administrating decentralized task complet
 
 ✅ Deliverable: Clean, responsive UI with intuitive task management
 
-### 📅 Day 7 – Finalize Deployment & QA
+### 📅 Phase 7 – Finalize Deployment & QA
 - Final testing of the entire flow (login → board → task → idea)
 
 - Set up error logging (Sentry, CloudWatch, etc.)
