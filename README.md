@@ -1,5 +1,5 @@
 # Planning phase -- alpha-taskangel
-initial prototype of taskangel, a self-administrating decentralized task completion platform with integrated charitable works 
+initial prototype of taskangel, a self-administrating decentralized task completion platform (this feature deprioritizing: with integrated charitable works) 
 
 ## Initiative Planning
 UX: Initiative Owner
