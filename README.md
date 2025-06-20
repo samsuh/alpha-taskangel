@@ -2,15 +2,23 @@
 initial prototype of taskangel, a self-administrating decentralized task completion platform 
 
 ## Initiative Planning
-UX: Initiative Owner
-End user who starts the initiative, it would look like: 
+UX: Initiative Owner "Owner" is the end user who starts the initiative, 
+
+For Owner, the experience would look like: 
 - have an idea, create an "initiative"
   - could be a single input page, but require a deposit in the creation flow (separate out administration costs and feature development costs).
+    - prompt for deposit after entering idea. "Ok" to deduct from a balance. 
 - wait for admin to create initial plan.
 - look and approve plan: check admin's initial plan and say "this looks good. go ahead with this"
 - look and approve tasks: check admins "work bounty" tasks/definitions/estimated costs
 - deposit bounty funds
 - approve and finalize: initiative is completed
+
+Owner requirements: 
+
+- Owner requires a "balance"; eventually the flow around that; initial balance, loading more balance, deducting. 
+- Owner probably wants to keep track of existing initiatives on a dashboard of some kind.
+  - dashboard can show existing progress, and also show required interactions, such as approving things or checking things.
 
 UX: Administrator
 from admin perspective: 
