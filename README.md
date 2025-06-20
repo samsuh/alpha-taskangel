@@ -22,7 +22,7 @@ Owner requirements:
 
 UX: Administrator
 from admin perspective: 
-- browse list of new initiatives. 
+- browse list of new initiatives. "recommended tasks for you" section at the top based on prior work completed and maybe a profile/resume/user-description section
 - find one that seems cool, and has a reputable sounding founder, and maybe some initial locked funding for the initiative. 
 - throw my hat into the ring to take lead admin role. algorithm will pick me based on reputation and skill match. 
 - i do initial planning, and i get paid out for doing the work. 
