@@ -53,6 +53,15 @@ User Story Initiatives:
 6. Sales tasks; Cold calling leads (maybe record the calls > transcription > maybe sentiment analysis/sales analysis)
 7. scraping emails/telephone numbers from X source
 
+## To Do in Building
+- Get Site scaffolding up
+- Feature: Authentication done
+- Feature: Project Creation
+- Feature: Task Creation
+- Feature: Task Pick up by Admin
+- Feature: Task Completion by Admin
+- Feature: Sub-contractor assignment?
+- Feature: Payment (mock up in point balance transfer) 
 
 
 # PRIOR SECTION
