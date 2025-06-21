@@ -44,6 +44,7 @@ Later features:
 - more discussion-style back and forth between owner/admin
 - dispute resolution if there's a conflict on satisfactory completion of tasks, or of planning. Initially escalate to me, but later bring it to community verifier/validator/arbitrators. 
 - Call for "Expert Contribution" to bring in subject matter experts
+- API access will be important to integrate into external workflows
 
 User Story Initiatives: 
 1. Create content; Instagram ad for my gym from my stock footage and copy.
